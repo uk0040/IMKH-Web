@@ -79,13 +79,17 @@
             color: white;
             font-size: 2rem;
             font-weight: bold;
-            
         }
         .content {
-            padding: 50px 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             text-align: center;
             background: transparent;
             color: white;
+            width: 80%;
+            z-index: 10;
         }
         footer {
             background: rgba(0, 0, 0, 0.7);
@@ -120,23 +124,16 @@
 
     <main class="main-image">
         <div class="main-text">Welcome to IMKH</div>
+        <section class="content">
+            <h2>More About IMKH</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus.</p>
+            <p>Curabitur eget nisi eu metus viverra porttitor vel vitae ligula.</p>
+        </section>
     </main>
-
-    <section class="content">
-        <h2>More About IMKH</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus.</p>
-        <p>Curabitur eget nisi eu metus viverra porttitor vel vitae ligula.</p>
-    </section>
 
     <footer>
         <p>&copy; 2025 IMKH. All rights reserved.</p>
     </footer>
 </body>
 </html>
-
-
-
-
-
-
 

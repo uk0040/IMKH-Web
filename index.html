@@ -23,6 +23,9 @@
             margin-left: auto;
             cursor: pointer;
         }
+        .logo img {
+            height: 40px;
+        }
         .menu-toggle {
             background: none;
             border: none;
@@ -85,7 +88,9 @@
 <body>
     <header>
         <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-        <h1 class="logo" onclick="location.href='index.html'">IMKH</h1>
+        <div class="logo" onclick="location.href='index.html'">
+            <img src="https://www.dropbox.com/scl/fi/zj3le4pe09vkjixwhmzld/imkh.png?rlkey=wmshkzmkdbhjljscedng7uim2&raw=1" alt="IMKH Logo">
+        </div>
         <nav id="menu" class="menu">
             <a href="about.html">About</a>
             <a href="members.html">Members</a>
@@ -104,6 +109,7 @@
     </footer>
 </body>
 </html>
+
 
 
 

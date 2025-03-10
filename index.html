@@ -29,21 +29,31 @@
             color: white;
             font-size: 20px;
             cursor: pointer;
-            display: none;
+            display: block;
         }
         .menu {
-            display: flex;
+            display: none;
+            flex-direction: row;
             justify-content: center;
-            gap: 15px;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            padding: 10px 0;
         }
         .menu a {
             color: white;
             text-decoration: none;
             padding: 10px 15px;
+            display: inline-block;
         }
         .menu a:hover {
             background-color: #555;
             border-radius: 5px;
+        }
+        .show-menu {
+            display: flex;
         }
         .main-image {
             display: flex;
@@ -64,30 +74,6 @@
             position: fixed;
             width: 100%;
             bottom: 0;
-        }
-        @media (max-width: 768px) {
-            .menu {
-                display: none;
-                flex-direction: column;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background-color: #333;
-                text-align: center;
-                gap: 0;
-            }
-            .menu a {
-                padding: 15px;
-                display: block;
-            }
-            .menu-toggle {
-                display: block;
-            }
-            .show-menu {
-                display: flex;
-                flex-direction: column;
-            }
         }
     </style>
     <script>
@@ -119,5 +105,6 @@
     </footer>
 </body>
 </html>
+
 
 

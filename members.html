@@ -19,10 +19,18 @@
             padding: 10px 20px;
             display: flex;
             align-items: center;
+            justify-content: space-between;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
+        }
+        .header-title {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.5rem;
+            font-weight: bold;
         }
         .logo {
             display: flex;
@@ -122,6 +130,7 @@
         <div class="logo" onclick="location.href='index.html'">
             <img src="https://www.dropbox.com/scl/fi/m6uq385uldfstxkcs35cq/imkh-_.png?rlkey=lwcfl98u4my5j942cvwmrbbkd&st=g5s4k7n7&raw=1" alt="IMKH Logo">
         </div>
+        <div class="header-title">Members</div>
         <button class="menu-toggle" onclick="toggleMenu()">☰</button>
         <nav id="menu" class="menu">
             <a href="about.html">About</a>

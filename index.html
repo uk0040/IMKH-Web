@@ -20,8 +20,8 @@
             position: relative;
         }
         .logo {
-            flex-grow: 1;
-            text-align: center;
+            margin-left: auto;
+            cursor: pointer;
         }
         .menu-toggle {
             background: none;
@@ -85,9 +85,8 @@
 <body>
     <header>
         <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-        <h1 class="logo">IMKH</h1>
+        <h1 class="logo" onclick="location.href='index.html'">IMKH</h1>
         <nav id="menu" class="menu">
-            <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="members.html">Members</a>
             <a href="gallery.html">Gallery</a>

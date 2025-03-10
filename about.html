@@ -65,9 +65,22 @@
         .show-menu {
             display: flex;
         }
-        .container {
-            padding: 100px 20px 20px;
+        .main-image {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: url('https://www.dropbox.com/scl/fi/ttzdra17k78qsuv4us8vn/stars-2179083.jpg?rlkey=xhsylougk05rixoi3v7lv4ed8&st=8kdspppw&raw=1') no-repeat center center/cover;
             text-align: center;
+            position: relative;
+        }
+        .container {
+            text-align: center;
+            background: transparent;
+            color: white;
+            width: 80%;
+            z-index: 10;
         }
         footer {
             background: rgba(0, 0, 0, 0.7);
@@ -100,7 +113,7 @@
         </nav>
     </header>
 
-    <main>
+    <main class="main-image">
         <section class="container">
             <h2>About IMKH</h2>
             <p>IMKH may be a music label. Glad to meet you.<br>We'll update this website when we want to do.<br><br>Hope you have a great life.</p>

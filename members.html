@@ -25,14 +25,11 @@
             top: 0;
             z-index: 1000;
         }
-        .header-title {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 1.5rem;
-            font-weight: bold;
+        .header-left {
+            display: flex;
+            align-items: center;
         }
-                .logo {
+        .logo {
             display: flex;
             align-items: center;
             cursor: pointer;
@@ -48,6 +45,13 @@
             font-size: 24px;
             cursor: pointer;
             display: block;
+        }
+        .header-title {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.5rem;
+            font-weight: bold;
         }
         .menu {
             display: none;
@@ -127,11 +131,13 @@
 </head>
 <body>
     <header>
-        <div class="logo" onclick="location.href='index.html'">
-            <img src="https://www.dropbox.com/scl/fi/m6uq385uldfstxkcs35cq/imkh-_.png?rlkey=lwcfl98u4my5j942cvwmrbbkd&st=g5s4k7n7&raw=1" alt="IMKH Logo">
+        <div class="header-left">
+            <div class="logo" onclick="location.href='index.html'">
+                <img src="https://www.dropbox.com/scl/fi/m6uq385uldfstxkcs35cq/imkh-_.png?rlkey=lwcfl98u4my5j942cvwmrbbkd&st=g5s4k7n7&raw=1" alt="IMKH Logo">
+            </div>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
         </div>
         <div class="header-title">Members</div>
-        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
         <nav id="menu" class="menu">
             <a href="about.html">About</a>
             <a href="members.html">Members</a>
@@ -143,7 +149,7 @@
 
     <main class="main-image">
         <section class="container">
-        
+            <h2>Meet Our Members</h2>
             <div class="member" onclick="location.href='member1.html'">
                 <img src="https://www.dropbox.com/scl/fi/3u7130ii02so0pebebj7m/SK_1.JPG?rlkey=1kulk4dxwxs2u7g5z6m1mmtp0&st=llbl4y7p&raw=1" alt="Member 1">
                 <div class="member-info">
@@ -166,4 +172,5 @@
     </footer>
 </body>
 </html>
+
 

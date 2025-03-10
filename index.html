@@ -14,20 +14,44 @@
             background-color: #333;
             color: white;
             padding: 10px 20px;
-        }
-        nav {
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
             align-items: center;
+            position: relative;
         }
-        nav a {
+        .logo {
+            flex-grow: 1;
+            text-align: center;
+        }
+        .menu-toggle {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            display: block;
+        }
+        .menu {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            text-align: center;
+        }
+        .menu a {
             color: white;
             text-decoration: none;
-            padding: 10px 15px;
+            padding: 10px;
+            display: block;
         }
-        nav a:hover {
+        .menu a:hover {
             background-color: #555;
-            border-radius: 5px;
+        }
+        .show-menu {
+            display: flex;
         }
         .main-image {
             display: flex;
@@ -50,14 +74,21 @@
             bottom: 0;
         }
     </style>
+    <script>
+        function toggleMenu() {
+            document.getElementById('menu').classList.toggle('show-menu');
+        }
+    </script>
 </head>
 <body>
     <header>
-        <h1>IMKH</h1>
-        <nav>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <h1 class="logo">IMKH</h1>
+        <nav id="menu" class="menu">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="members.html">Members</a>
+            <a href="gallery.html">Gallery</a>
             <a href="news.html">News</a>
             <a href="contact.html">Contact</a>
         </nav>
@@ -72,3 +103,4 @@
     </footer>
 </body>
 </html>
+

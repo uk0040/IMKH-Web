@@ -101,19 +101,15 @@
             border-radius: 5px;
             margin-bottom: 20px;
         }
-        .gallery-button {
-            display: block;
+        .content-box {
             width: 100%;
-            background-color: #333;
-            color: white;
-            padding: 10px;
-            text-align: center;
+            height: 100px;
+            background: rgba(255, 255, 255, 0.3);
+            border: 1px solid white;
             border-radius: 5px;
-            text-decoration: none;
-            margin-top: 20px;
-        }
-        .gallery-button:hover {
-            background-color: #555;
+            padding: 10px;
+            box-sizing: border-box;
+            margin-top: 10px;
         }
         footer {
             background: rgba(0, 0, 0, 0.7);
@@ -153,11 +149,12 @@
         <section class="container">
             <h2>Sanguk Kang</h2>
             <img src="https://www.dropbox.com/scl/fi/4ozhdmva9q968vqs7cwik/A-1.jpg?rlkey=6wgrf5anizfq8t8hp493yxxdz&st=v840dtul&raw=1" alt="Profile Picture" class="profile-pic">
-            <p><strong>Name:</strong> Sanguk Kang</p>
-            <p><strong>Education:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <p><strong>Experience:</strong> Ut tristique turpis et ligula cursus, at varius odio vehicula.</p>
-            <p><strong>Others:</strong> Praesent in ligula eget risus sagittis tincidunt.</p>
-            <a href="gallery.html" class="gallery-button">View Gallery</a>
+            <p><strong>Education:</strong></p>
+            <div class="content-box"></div>
+            <p><strong>Experience:</strong></p>
+            <div class="content-box"></div>
+            <p><strong>Others:</strong></p>
+            <div class="content-box"></div>
         </section>
     </main>
 
@@ -166,5 +163,4 @@
     </footer>
 </body>
 </html>
-
 

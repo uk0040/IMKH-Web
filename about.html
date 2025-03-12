@@ -118,6 +118,36 @@
             width: 100%;
             bottom: 0;
         }
+                @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+            }
+            .header-left {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                padding: 10px;
+            }
+            .menu {
+                position: relative;
+                top: auto;
+                left: auto;
+                transform: none;
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+                padding: 10px 0;
+                display: none;
+            }
+            .menu.show-menu {
+                display: flex;
+            }
+            .menu a {
+                display: block;
+                padding: 10px;
+            }
+        }
     </style>
     <script>
         function toggleMenu() {

@@ -26,6 +26,10 @@
             top: 0;
             z-index: 1000;
         }
+        .header-left {
+            display: flex;
+            align-items: center;
+        }
         .logo {
             display: flex;
             align-items: center;
@@ -42,19 +46,14 @@
             font-size: 24px;
             cursor: pointer;
             display: block;
+            margin-left: 15px;
         }
         .menu {
-            display: none;
-            flex-direction: row;
+            display: flex;
             justify-content: center;
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            background: black;
-            padding: 10px 0;
-            width: auto;
-            border-radius: 5px;
+            gap: 20px;
+            position: relative;
+            background: transparent;
         }
         .menu a {
             color: white;
@@ -65,9 +64,6 @@
         .menu a:hover {
             background-color: #555;
             border-radius: 5px;
-        }
-        .show-menu {
-            display: flex;
         }
         .main-content {
             display: flex;
@@ -95,7 +91,7 @@
             margin: 5px 0;
             border-radius: 5px;
             text-align: center;
-            width: 100%;
+            width: 70%;
         }
         .links a:hover {
             background: #444;
@@ -118,10 +114,12 @@
 </head>
 <body>
     <header>
-        <div class="logo" onclick="location.href='index.html'">
-            <img src="https://www.dropbox.com/scl/fi/m6uq385uldfstxkcs35cq/imkh-_.png?rlkey=lwcfl98u4my5j942cvwmrbbkd&st=g5s4k7n7&raw=1" alt="IMKH Logo">
+        <div class="header-left">
+            <div class="logo" onclick="location.href='index.html'">
+                <img src="https://www.dropbox.com/scl/fi/m6uq385uldfstxkcs35cq/imkh-_.png?rlkey=lwcfl98u4my5j942cvwmrbbkd&st=g5s4k7n7&raw=1" alt="IMKH Logo">
+            </div>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
         </div>
-        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
         <nav id="menu" class="menu">
             <a href="about.html">About</a>
             <a href="members.html">Members</a>
@@ -156,5 +154,6 @@
     </footer>
 </body>
 </html>
+
 
 

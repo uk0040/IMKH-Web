@@ -12,17 +12,23 @@
             color: white;
             height: 100vh;
             overflow-y: auto;
+            background: black;
         }
         header {
-            background: transparent;
+            background: black;
             color: white;
             padding: 10px 20px;
             display: flex;
             align-items: center;
+            justify-content: space-between;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
+        }
+        .header-left {
+            display: flex;
+            align-items: center;
         }
         .logo {
             display: flex;
@@ -40,17 +46,21 @@
             font-size: 24px;
             cursor: pointer;
             display: block;
+            margin-left: 15px;
         }
         .menu {
             display: none;
             flex-direction: row;
             justify-content: center;
+            align-items: center;
             position: absolute;
-            top: 100%;
-            left: 0;
-            width: 100%;
-            background: transparent;
-            padding: 10px 0;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: black;
+            padding: 10px 20px;
+            width: auto;
+            border-radius: 5px;
         }
         .menu a {
             color: white;
@@ -65,15 +75,14 @@
         .show-menu {
             display: flex;
         }
-        .main-image {
+        main {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
-            background: url('https://www.dropbox.com/scl/fi/ttzdra17k78qsuv4us8vn/stars-2179083.jpg?rlkey=xhsylougk05rixoi3v7lv4ed8&st=8kdspppw&raw=1') no-repeat center center/cover;
-            text-align: center;
-            position: relative;
+            min-height: calc(100vh - 100px);
+            padding: 50px 20px;
+            box-sizing: border-box;
         }
         .container {
             text-align: center;
@@ -89,12 +98,6 @@
             max-width: 600px;
             margin: 20px auto;
         }
-        .contact-info h2 {
-            margin-top: 0;
-        }
-        .contact-info p {
-            margin: 5px 0;
-        }
         footer {
             background: rgba(0, 0, 0, 0.7);
             color: white;
@@ -107,16 +110,23 @@
     </style>
     <script>
         function toggleMenu() {
-            document.getElementById('menu').classList.toggle('show-menu');
+            let menu = document.getElementById('menu');
+            if (menu.style.display === 'flex') {
+                menu.style.display = 'none';
+            } else {
+                menu.style.display = 'flex';
+            }
         }
     </script>
 </head>
 <body>
     <header>
-        <div class="logo" onclick="location.href='index.html'">
-            <img src="https://www.dropbox.com/scl/fi/m6uq385uldfstxkcs35cq/imkh-_.png?rlkey=lwcfl98u4my5j942cvwmrbbkd&st=g5s4k7n7&raw=1" alt="IMKH Logo">
+        <div class="header-left">
+            <div class="logo" onclick="location.href='index.html'">
+                <img src="https://www.dropbox.com/scl/fi/m6uq385uldfstxkcs35cq/imkh-_.png?rlkey=lwcfl98u4my5j942cvwmrbbkd&st=g5s4k7n7&raw=1" alt="IMKH Logo">
+            </div>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
         </div>
-        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
         <nav id="menu" class="menu">
             <a href="about.html">About</a>
             <a href="members.html">Members</a>
@@ -126,7 +136,7 @@
         </nav>
     </header>
 
-    <main class="main-image">
+    <main>
         <section class="container">
             <div class="contact-info">
                 <h2>Get in Touch</h2>
@@ -142,4 +152,3 @@
     </footer>
 </body>
 </html>
-

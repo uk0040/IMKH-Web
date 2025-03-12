@@ -12,9 +12,10 @@
             color: white;
             height: 100vh;
             overflow-y: auto;
+            background: black;
         }
         header {
-            background: transparent;
+            background: black;
             color: white;
             padding: 10px 20px;
             display: flex;
@@ -65,22 +66,36 @@
         .show-menu {
             display: flex;
         }
-        .main-image {
+        .main-content {
             display: flex;
-            flex-direction: column;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
-            min-height: 100vh;
-            background: url('https://www.dropbox.com/scl/fi/ttzdra17k78qsuv4us8vn/stars-2179083.jpg?rlkey=xhsylougk05rixoi3v7lv4ed8&st=8kdspppw&raw=1') no-repeat center center/cover;
-            text-align: center;
-            position: relative;
+            padding: 100px 20px 20px;
         }
         .container {
-            text-align: center;
-            background: transparent;
+            text-align: left;
             color: white;
-            width: 80%;
-            z-index: 10;
+            width: 60%;
+        }
+        .links {
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+        .links a {
+            display: block;
+            background: #222;
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            text-align: center;
+            width: 100%;
+        }
+        .links a:hover {
+            background: #444;
         }
         footer {
             background: rgba(0, 0, 0, 0.7);
@@ -113,10 +128,23 @@
         </nav>
     </header>
 
-    <main class="main-image">
+    <main class="main-content">
         <section class="container">
             <h2>About IMKH</h2>
             <p>IMKH may be a music label. Glad to meet you.<br>We'll update this website when we want to do.<br><br>Hope you have a great life.</p>
+        </section>
+        <section class="links">
+            <a href="#">YouTube</a>
+            <a href="#">Spotify</a>
+            <a href="#">Apple Music</a>
+            <a href="#">YouTube Music</a>
+            <a href="#">Melon</a>
+            <a href="#">Genie</a>
+            <a href="#">Bugs</a>
+            <a href="#">Flo</a>
+            <a href="#">Vibe</a>
+            <a href="#">Amazon Music</a>
+            <a href="#">Instagram</a>
         </section>
     </main>
 
@@ -125,3 +153,4 @@
     </footer>
 </body>
 </html>
+

@@ -19,10 +19,15 @@
             padding: 10px 20px;
             display: flex;
             align-items: center;
+            justify-content: space-between;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
+        }
+        .header-left {
+            display: flex;
+            align-items: center;
         }
         .logo {
             display: flex;
@@ -40,17 +45,20 @@
             font-size: 24px;
             cursor: pointer;
             display: block;
+            margin-left: 15px;
         }
         .menu {
             display: none;
             flex-direction: row;
             justify-content: center;
+            align-items: center;
             position: absolute;
-            top: 100%;
-            left: 0;
-            width: 100%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             background: transparent;
-            padding: 10px 0;
+            padding: 10px 20px;
+            border-radius: 5px;
         }
         .menu a {
             color: white;
@@ -81,13 +89,6 @@
             font-weight: bold;
             margin-bottom: 20px;
         }
-        .content {
-            text-align: center;
-            background: transparent;
-            color: white;
-            width: 80%;
-            z-index: 10;
-        }
         footer {
             background: rgba(0, 0, 0, 0.7);
             color: white;
@@ -100,16 +101,19 @@
     </style>
     <script>
         function toggleMenu() {
-            document.getElementById('menu').classList.toggle('show-menu');
+            let menu = document.getElementById('menu');
+            menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
         }
     </script>
 </head>
 <body>
     <header>
-        <div class="logo" onclick="location.href='index.html'">
-            <img src="https://www.dropbox.com/scl/fi/m6uq385uldfstxkcs35cq/imkh-_.png?rlkey=lwcfl98u4my5j942cvwmrbbkd&st=g5s4k7n7&raw=1" alt="IMKH Logo">
+        <div class="header-left">
+            <div class="logo" onclick="location.href='index.html'">
+                <img src="https://www.dropbox.com/scl/fi/m6uq385uldfstxkcs35cq/imkh-_.png?rlkey=lwcfl98u4my5j942cvwmrbbkd&st=g5s4k7n7&raw=1" alt="IMKH Logo">
+            </div>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
         </div>
-        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
         <nav id="menu" class="menu">
             <a href="about.html">About</a>
             <a href="members.html">Members</a>
@@ -121,7 +125,6 @@
 
     <main class="main-image">
         <div class="main-text">You are art,<br>as so am I.</div>
-        
     </main>
 
     <footer>
@@ -129,4 +132,3 @@
     </footer>
 </body>
 </html>
-

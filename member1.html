@@ -9,40 +9,97 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            color: white;
+            height: 100vh;
+            overflow-y: auto;
+            background: black;
         }
         header {
-            background-color: #333;
+            background: black;
             color: white;
             padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: fixed;
             width: 100%;
-            text-align: center;
+            top: 0;
+            z-index: 1000;
+        }
+        .header-left {
+            display: flex;
+            align-items: center;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        .logo img {
+            height: 40px;
+            margin-right: 15px;
+        }
+        .menu-toggle {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            display: block;
+            margin-left: 15px;
+        }
+        .menu {
+            display: none;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: black;
+            padding: 10px 20px;
+            width: auto;
+            border-radius: 5px;
+        }
+        .menu a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: inline-block;
+        }
+        .menu a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+        .show-menu {
+            display: flex;
+        }
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: calc(100vh - 100px);
+            padding: 50px 20px;
+            box-sizing: border-box;
         }
         .container {
-            width: 60%;
-            margin: 20px auto;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.2);
             padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            background-color: #f9f9f9;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 600px;
         }
         .profile-pic {
-            display: block;
-            margin: 0 auto 20px;
             width: 180px;
             height: 240px;
             object-fit: cover;
             background-color: #ccc;
             border: 1px solid #ddd;
-        }
-        .section {
+            border-radius: 5px;
             margin-bottom: 20px;
-        }
-        .section h2 {
-            border-bottom: 2px solid #ddd;
-            padding-bottom: 5px;
         }
         .gallery-button {
             display: block;
@@ -53,41 +110,61 @@
             text-align: center;
             border-radius: 5px;
             text-decoration: none;
+            margin-top: 20px;
         }
         .gallery-button:hover {
             background-color: #555;
         }
+        footer {
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            width: 100%;
+            bottom: 0;
+        }
     </style>
+    <script>
+        function toggleMenu() {
+            let menu = document.getElementById('menu');
+            menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+        }
+    </script>
 </head>
 <body>
     <header>
-        <h1>Sanguk Kang</h1>
+        <div class="header-left">
+            <div class="logo" onclick="location.href='index.html'">
+                <img src="https://www.dropbox.com/scl/fi/m6uq385uldfstxkcs35cq/imkh-_.png?rlkey=lwcfl98u4my5j942cvwmrbbkd&st=g5s4k7n7&raw=1" alt="IMKH Logo">
+            </div>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        </div>
+        <nav id="menu" class="menu">
+            <a href="about.html">About</a>
+            <a href="members.html">Members</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="news.html">News</a>
+            <a href="contact.html">Contact</a>
+        </nav>
     </header>
-    
-    <div class="container">
-        <img src="https://www.dropbox.com/scl/fi/4ozhdmva9q968vqs7cwik/A-1.jpg?rlkey=6wgrf5anizfq8t8hp493yxxdz&st=v840dtul&raw=1" alt="Profile Picture" class="profile-pic">
-        
-        <div class="section">
-            <h2>Name</h2>
-            <p>Sanguk Kang</p>
-        </div>
-        
-        <div class="section">
-            <h2>Education</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at ex id elit viverra dictum.</p>
-        </div>
-        
-        <div class="section">
-            <h2>Experience</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tristique turpis et ligula cursus, at varius odio vehicula.</p>
-        </div>
-        
-        <div class="section">
-            <h2>Others</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in ligula eget risus sagittis tincidunt.</p>
-        </div>
-        
-    </div>
+
+    <main>
+        <section class="container">
+            <h2>Sanguk Kang</h2>
+            <img src="https://www.dropbox.com/scl/fi/4ozhdmva9q968vqs7cwik/A-1.jpg?rlkey=6wgrf5anizfq8t8hp493yxxdz&st=v840dtul&raw=1" alt="Profile Picture" class="profile-pic">
+            <p><strong>Name:</strong> Sanguk Kang</p>
+            <p><strong>Education:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p><strong>Experience:</strong> Ut tristique turpis et ligula cursus, at varius odio vehicula.</p>
+            <p><strong>Others:</strong> Praesent in ligula eget risus sagittis tincidunt.</p>
+            <a href="gallery.html" class="gallery-button">View Gallery</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 IMKH. All rights reserved.</p>
+    </footer>
 </body>
 </html>
+
 

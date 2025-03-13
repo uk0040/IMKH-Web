@@ -106,6 +106,47 @@
             width: 75%;
             text-align: left;
         }
+        /* 제목과 인스타그램 버튼을 한 줄에 배치 */
+        .title-container {
+            display: flex;
+            align-items: center; /* 세로 중앙 정렬 */
+            justify-content: space-between; /* h2와 버튼 간격 조정 */
+            width: 100%;
+        }
+
+        /* 인스타그램 버튼 스타일 */
+        .instagram-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: transparent;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .instagram-button img {
+            width: 100%;
+            height: auto;
+            border-radius: 50%; /* 아이콘을 동그랗게 */
+        }
+
+        /* 호버 효과 */
+        .instagram-button:hover {
+            transform: scale(1.1);
+        }
+
+        /* 반응형 - 화면이 작아지면 버튼을 h2 아래로 배치 */
+        @media (max-width: 768px) {
+            .title-container {
+                flex-direction: column; /* 세로 정렬 */
+                align-items: center; /* 가운데 정렬 */
+            }
+            .instagram-button {
+                margin-top: 10px;
+            }
+        }
 
         .links {
             width: 100%;
@@ -249,12 +290,17 @@
                 <a href="https://www.music-flo.com/detail/artist/405382061/track" target="_blank">Flo</a>
                 <a href="https://vibe.naver.com/artist/5399656" target="_blank">Vibe</a>
                 <a href="https://www.amazon.com/music/player/artists/B0DY13115J/%EC%B9%BC-kharl" target="_blank">Amazon Music</a>
-                <a href="https://www.instagram.com/hkmimkh/" target="_blank">Instagram</a>
+
     </div>
 </div>
         
         <section class="container">
-            <h2>About IMKH</h2>
+            <div class="title-container">
+                <h2>About IMKH</h2>
+                <a href="https://www.instagram.com/hkmimkh/" target="_blank" class="instagram-button">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+                </a>
+            </div>
             <p><strong>IMKH</strong> was founded to <strong>manage kharl’s music activities.</strong></p>
             <p>The team consists of <strong>kharl Sanguk Kang</strong>, and <strong>iM</strong>, with the following roles:<br>	•	<strong>kharl Sanguk Kang</strong>: Music production, website development, and overall planning<br>	•	<strong>iM</strong>: Marketing strategy, content creation, procurement, and general administration</p>
             <p>Since the team is composed of two members, if one takes on a leadership role in a specific area, the other automatically becomes the team member. Major decisions are made <strong>through discussions and meetings.</strong></p>

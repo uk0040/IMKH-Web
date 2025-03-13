@@ -93,7 +93,7 @@
         .video-container {
             width: 100%;
             text-align: center;
-            margin-bottom: 20px; /* links와 간격 */
+            margin-bottom: 10px; /* links와 간격 */
         }
 
         .video-container iframe {
@@ -123,11 +123,14 @@
         }
 
         .links-container {
-            display: flex;
-            flex-wrap: wrap; /* 여러 줄 표시 가능 */
-            justify-content: center; /* 가운데 정렬 */
-            gap: 10px; /* 링크 사이 간격 */
+            display: grid;
+            grid-template-columns: repeat(5, 1fr); /* 한 줄에 5개씩 */
+            gap: 10px; /* 링크 간격 */
+            justify-items: center; /* 중앙 정렬 */
+            max-width: 800px; /* 적절한 너비 설정 */
+            margin: 0 auto; /* 가운데 정렬 */
         }
+
         .links a {
             display: inline-block;
             background: #222;
@@ -180,6 +183,23 @@
             .menu a {
                 display: block;
                 padding: 10px;
+            }
+        }
+        @media (max-width: 900px) {
+            .links-container {
+                grid-template-columns: repeat(3, 1fr); /* 3개씩 */
+            }
+        }
+
+        @media (max-width: 600px) {
+            .links-container {
+                grid-template-columns: repeat(2, 1fr); /* 2개씩 */
+            }
+        }
+
+        @media (max-width: 400px) {
+            .links-container {
+                grid-template-columns: repeat(1, 1fr); /* 1개씩 */
             }
         }
     </style>

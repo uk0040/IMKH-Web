@@ -93,7 +93,7 @@
         .video-container {
             width: 100%;
             text-align: center;
-            margin-bottom: 30px; /* 아래 요소와의 간격 */
+            margin-bottom: 20px; /* links와 간격 */
         }
 
         .video-container iframe {
@@ -108,29 +108,38 @@
         }
 
         .links {
-            width: 30%;
+            width: 100%;
             display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-        }
-        .links-title {
+            flex-direction: column; /* 상단 제목과 링크 정렬 */
+            align-items: center; /* 가운데 정렬 */
             text-align: center;
+            margin-top: 20px;
+        }
+
+        .links-title {
             font-size: 1.2rem;
             font-weight: bold;
             margin-bottom: 10px;
         }
+
+        .links-container {
+            display: flex;
+            flex-wrap: wrap; /* 여러 줄 표시 가능 */
+            justify-content: center; /* 가운데 정렬 */
+            gap: 10px; /* 링크 사이 간격 */
+        }
         .links a {
-            display: block;
+            display: inline-block;
             background: #222;
             color: white;
             text-decoration: none;
             font-family: 'Poppins', sans-serif;
-            padding: 10px;
-            margin: 5px 0;
+            padding: 10px 15px;
             border-radius: 5px;
             text-align: center;
-            width: 60%;
+            min-width: 100px;
         }
+
         .links a:hover {
             background: #444;
         }
@@ -198,10 +207,26 @@
     </header>
 
     <main class="main-content">
-        <section class="video-container">
-            <h2>kharl - 작별 (Official Video)</h2>
+        <div class="video-container">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/o0C7j4kug8Q?si=KqCU65djkZk-_9Lj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </section>
+        </div>
+
+        <div class="links">
+            <p class="links-title">Links to listen kharl</p>
+            <div class="links-container">
+                <a href="https://www.youtube.com/@hkmimkh" target="_blank">YouTube</a>
+                <a href="https://open.spotify.com/artist/6FpOHILF33XOAbFonZoisE?si=z9MosDXTT3Wgv4c2adK2Cg" target="_blank">Spotify</a>
+                <a href="https://music.apple.com/kr/artist/kharl/1617957275" target="_blank">Apple Music</a>
+                <a href="https://music.youtube.com/channel/UCN3HuMuSfe-r-HxHiMFD5JQ" target="_blank">YouTube Music</a>
+                <a href="https://www.melon.com/artist/timeline.htm?artistId=3087962" target="_blank">Melon</a>
+                <a href="https://www.genie.co.kr/detail/artistInfo?xxnm=81381815" target="_blank">Genie</a>
+                <a href="https://music.bugs.co.kr/artist/20157543?wl_ref=list_ab_04" target="_blank">Bugs</a>
+                <a href="https://www.music-flo.com/detail/artist/405382061/track" target="_blank">Flo</a>
+                <a href="https://vibe.naver.com/artist/5399656" target="_blank">Vibe</a>
+                <a href="https://www.amazon.com/music/player/artists/B0DY13115J/%EC%B9%BC-kharl" target="_blank">Amazon Music</a>
+                <a href="https://www.instagram.com/hkmimkh/" target="_blank">Instagram</a>
+    </div>
+</div>
         
         <section class="container">
             <h2>About IMKH</h2>
@@ -222,20 +247,7 @@
             <p>    Anyway, since kharl is not a proper noun, I introduce myself as either “a kharl who makes music” or “kharl + my real name.” For this kharl who makes music, music is a means of expression—he seeks to leave legacy of his life through music. Primarily, because the process helps him organize his thoughts, and secondarily, he hopes that the result might, in some way, be of help to someone else.</p>
         
         </section>
-        <section class="links">
-            <p class="links-title"> <span class="Courgette">Links to listen kharl</span></p>
-            <a href="https://www.youtube.com/@hkmimkh" target="_blank">YouTube</a>
-            <a href="https://open.spotify.com/artist/6FpOHILF33XOAbFonZoisE?si=z9MosDXTT3Wgv4c2adK2Cg" target="_blank">Spotify</a>
-            <a href="https://music.apple.com/kr/artist/kharl/1617957275" target="_blank">Apple Music</a>
-            <a href="https://music.youtube.com/channel/UCN3HuMuSfe-r-HxHiMFD5JQ" target="_blank">YouTube Music</a>
-            <a href="https://www.melon.com/artist/timeline.htm?artistId=3087962" target="_blank">Melon</a>
-            <a href="https://www.genie.co.kr/detail/artistInfo?xxnm=81381815" target="_blank">Genie</a>
-            <a href="https://music.bugs.co.kr/artist/20157543?wl_ref=list_ab_04" target="_blank">Bugs</a>
-            <a href="https://www.music-flo.com/detail/artist/405382061/track?sortType=POPULARITY&roleType=ALL" target="_blank">Flo</a>
-            <a href="https://vibe.naver.com/artist/5399656" target="_blank">Vibe</a>
-            <a href="https://www.amazon.com/music/player/artists/B0DY13115J/%EC%B9%BC-kharl" target="_blank">Amazon Music</a>
-            <a href="https://www.instagram.com/hkmimkh/" target="_blank">Instagram</a>
-        </section>
+        
     </main>
 
     <footer>

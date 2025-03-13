@@ -4,13 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery - IMKH</title>
-    <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        .Courgette {
-            font-family: 'Courgette', sans-serif;
-            font-weight: 600;
-            color: #fcfcfc;
-        }
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -69,26 +64,122 @@
             border-radius: 5px;
         }
         .menu a {
+            font-family: "Poppins", sans-serif;
+            font-size: 16px;
+            font-weight: 500;
             color: white;
             text-decoration: none;
             padding: 10px 15px;
             display: inline-block;
-            font-family: 'Poppins', sans-serif;
-            font-weight: 500;
-            transition: transform 0.2s ease, font-size 0.2s ease;
+            transition: transform 0.2s ease-in-out;
         }
         .menu a:hover {
-            transform: scale(1.2);
-            font-size: 1.1em;
+            transform: scale(1.1);
         }
         .show-menu {
             display: flex;
+        }
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: calc(100vh - 100px);
+            padding: 50px 20px;
+            box-sizing: border-box;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 10px;
+            width: 80%;
+            margin-top: 20px;
+        }
+        .gallery img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: white;
+            color: black;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+            font-size: 20px;
+        }
+        footer {
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            width: 100%;
+            bottom: 0;
+        }
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+            }
+            .header-left {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                padding: 10px;
+            }
+            .menu {
+                position: relative;
+                top: auto;
+                left: auto;
+                transform: none;
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+                padding: 10px 0;
+                display: none;
+            }
+            .menu.show-menu {
+                display: flex;
+            }
+            .menu a {
+                display: block;
+                padding: 10px;
+            }
         }
     </style>
     <script>
         function toggleMenu() {
             let menu = document.getElementById('menu');
             menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+        }
+        function openLightbox(src) {
+            document.getElementById('lightbox-img').src = src;
+            document.getElementById('lightbox').style.display = 'flex';
+        }
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
         }
     </script>
 </head>
@@ -109,118 +200,23 @@
     </header>
 
     <main>
-
-        <h2><span class="Courgette">Basically, for the parents, and then, for whoever.</span></h2>
+        <h2>Basically, for the parents, and then, for whoever.</h2>
         
         <div class="gallery">
-
             <img src="https://www.dropbox.com/scl/fi/f00r5at7cfh93ouwpgbpl/IMG_9738.JPG?rlkey=vp6ciziarzfeh3ndblv04zfjj&st=5nenp9kp&raw=1" onclick="openLightbox(this.src)" alt="Gallery Image">
-            
             <img src="https://www.dropbox.com/scl/fi/fuel1779cssm1fkilwdiz/IMG_8558.jpeg?rlkey=pjvxsgdwa5velsjwafdoqhdda&st=md07x8xl&raw=1" onclick="openLightbox(this.src)" alt="Gallery Image">
-            
             <img src="https://www.dropbox.com/scl/fi/fhqqm6iyqp9qa5cu9jpzx/IMG_8554.jpeg?rlkey=tu7t1qpgvio0kkhyfn5ngws8a&st=mv48l7ik&raw=1" onclick="openLightbox(this.src)" alt="Gallery Image">
-            
             <img src="https://www.dropbox.com/scl/fi/ctqd45nsnkygbgfbfowhi/IMG_8535.jpeg?rlkey=c4p4xlzg4fc3zqk6viaook120&st=bb98b01g&raw=1" onclick="openLightbox(this.src)" alt="Gallery Image">
-            
-            <img src="https://www.dropbox.com/scl/fi/dsfe04a0og0qeidh2uvk3/IMG_8179.JPG?rlkey=4vd5ytxlcrl745cjokids6zj0&st=mkv02b7d&raw=1" onclick="openLightbox(this.src)" alt="Gallery Image">
-            
-            <img src="https://www.dropbox.com/scl/fi/s55bal87dbepz8zjc8ybc/IMG_8118.jpeg?rlkey=y5nw3zwvbujf66kkj4ljk42yy&st=1hzaxcml&raw=1" onclick="openLightbox(this.src)" alt="Gallery Image">
-            
-            <img src="https://www.dropbox.com/scl/fi/r3bt08lbhur514zuwzaxj/IMG_7988.JPG?rlkey=nji0pvae3dfyu85ofvvaldko1&st=ko7wlqmc&raw=1" onclick="openLightbox(this.src)" alt="Gallery Image">
-            
-            <img src="https://www.dropbox.com/scl/fi/i0no3j82skuy67cq6za2x/IMG_7983.JPG?rlkey=3pm64tpi5kugbc25o6z7y2vqd&st=vgezc1gu&raw=1" onclick="openLightbox(this.src)" alt="Gallery Image">
-            
-            <img src="https://www.dropbox.com/scl/fi/s4jfxze1qrtzs93hb66oy/IMG_7929.jpeg?rlkey=3zx531uujhbv41pfm9wzptihc&st=dwd7ape1&raw=1" onclick="openLightbox(this.src)" alt="Gallery Image">
-            
-            <img src="https://www.dropbox.com/scl/fi/zljkm1c9lp9hw7nhmrrsw/IMG_7354.JPG?rlkey=jqf5kv4ilbsmbof6g0wi2ddlr&st=sgr106mo&raw=1" onclick="openLightbox(this.src)" alt="Gallery Image">
-            
-            <img src="https://www.dropbox.com/scl/fi/q7isf2rzmompuk8eg9ns8/IMG_7314.jpeg?rlkey=uh3tcjzf7wbh9ge3z4qt6by67&st=8g0m1nuz&raw=1" onclick="openLightbox(this.src)" alt="Gallery Image">
-            
-            <img src="https://www.dropbox.com/scl/fi/wqje263m500ddrk13ffdw/IMG_7187.jpeg?rlkey=a6v44h82shbmsyuea94rqttqw&st=jwxwaw1m&raw=1" onclick="openLightbox(this.src)" alt="Gallery Image">
-            
-            <img src="https://www.dropbox.com/scl/fi/h3wdezxu83b2k2q1s1fy6/IMG_7157.jpeg?rlkey=iz66cxm2vyr9b84qt619vykrj&st=c501omg5&raw=1" onclick="openLightbox(this.src)" alt="Gallery Image">
-            
-            <img src="https://www.dropbox.com/scl/fi/jjhc1gihbh87vvd4nn5if/IMG_6798.jpeg?rlkey=crzff5mzwjcs2jsicnr7yu4g9&st=vvsyliw1&raw=1" onclick="openLightbox(this.src)" alt="Gallery Image">
-            
-            <img src="https://www.dropbox.com/scl/fi/7np6q7g9gd7nm75pfhz8c/IMG_6561.jpeg?rlkey=nrky6ae41doftlf9d0z5jw5be&st=ea9ruu8r&raw=1" onclick="openLightbox(this.src)" alt="Gallery Image">
-            
-            <img src="https://www.dropbox.com/scl/fi/tgcjrof0mxcrpp9rv6qk6/IMG_6217.jpeg?rlkey=aqrwvwy6omwhmws6u4e1ouoii&st=0bwqlose&raw=1" onclick="openLightbox(this.src)" alt="Gallery Image">
-            
-            <img src="https://www.dropbox.com/scl/fi/2l5c8kfhe8a8uuecs5e65/IMG_5693.jpeg?rlkey=0bkqtuqky4f3b4u9a97b70jz9&st=7lw6xnid&raw=1" onclick="openLightbox(this.src)" alt="Gallery Image">
-            
-            <img src="https://www.dropbox.com/scl/fi/k1idha7w6ga8tcx4d5eju/IMG_5685.jpeg?rlkey=8tcfdfczflx7ykpncf4dd8srl&st=ndlbw8v5&raw=1" onclick="openLightbox(this.src)" alt="Gallery Image">
-            
-            <img src="https://www.dropbox.com/scl/fi/sgiz4nwb06kxe6d35cufu/IMG_5645.JPG?rlkey=5pgdbm6zrk8v9l5adfxx0jqef&st=5bspm75l&raw=1" onclick="openLightbox(this.src)" alt="Gallery Image">
-            
-            <img src="https://www.dropbox.com/scl/fi/owj0omb61eh4f1cycxr64/IMG_4810.jpeg?rlkey=enzs1ep6t6oizo3tctyfn3i6e&st=so5rnpwa&raw=1" onclick="openLightbox(this.src)" alt="Gallery Image">
-            
-            <img src="https://www.dropbox.com/scl/fi/splao3aozdcq8ij1j3874/IMG_4783.JPG?rlkey=hpuqyo6s29rxvs977i0x7e30r&st=dv805xzv&raw=1" onclick="openLightbox(this.src)" alt="Gallery Image">
-            
-            <img src="https://www.dropbox.com/scl/fi/0dmpwnmqxwjdj3ubbbm64/IMG_4688.JPG?rlkey=6z45b5j12fzf6h7nfl1j0w3fl&st=s92gutag&raw=1" onclick="openLightbox(this.src)" alt="Gallery Image">
-            
-            <img src="https://www.dropbox.com/scl/fi/dijbaxytp6z3y7405ofxd/IMG_4677.jpeg?rlkey=zlhfjt7h8ctntla5flgopjos7&st=o1d4qnu0&raw=1" onclick="openLightbox(this.src)" alt="Gallery Image">
-            
-            <img src="https://www.dropbox.com/scl/fi/bx7yvnt6q15lz3nspncnk/IMG_4650.jpeg?rlkey=i55ukaesg0jlefy86msaj9t66&st=0vla0thh&raw=1" onclick="openLightbox(this.src)" alt="Gallery Image">
-            
-            <img src="https://www.dropbox.com/scl/fi/how4r8mekrj8lm2kwap30/IMG_4163.jpeg?rlkey=4yi2ykpimjfkz8cfsos22qcmp&st=5ch22kch&raw=1" onclick="openLightbox(this.src)" alt="Gallery Image">
-            
-            <img src="https://www.dropbox.com/scl/fi/cjz0qyuc8j6eco7g0fmp1/IMG_3988.JPG?rlkey=pqptmcsp52dqusx89f5yw8mmr&st=c5ff77ol&raw=1" onclick="openLightbox(this.src)" alt="Gallery Image">
-            
-            <img src="https://www.dropbox.com/scl/fi/rngb20jiryyn7hw04mn3z/IMG_3072-2.JPG?rlkey=md11ajr7wwe7r68x138vht5f4&st=ceh4nbjc&raw=1" onclick="openLightbox(this.src)" alt="Gallery Image">
-            
-            <img src="https://www.dropbox.com/scl/fi/0tgadey67svvm4aegy37g/IMG_3039.jpeg?rlkey=1wfdpgwiomu8kgh85mayobjo0&st=2k2et9wg&raw=1" onclick="openLightbox(this.src)" alt="Gallery Image">
-            
-            <img src="https://www.dropbox.com/scl/fi/zsrsmsr4airblgyii1jpu/IMG_2986.jpeg?rlkey=qafijs6oay4rxb92zcln5o2ox&st=a3lfywk4&raw=1" onclick="openLightbox(this.src)" alt="Gallery Image">
-            
-            <img src="https://www.dropbox.com/scl/fi/66ecrda2oan1df2h6c5zi/IMG_2959.jpeg?rlkey=2ssswy0xp0ejv3wls1wqbh4hy&st=jj4kvz9e&raw=1" onclick="openLightbox(this.src)" alt="Gallery Image">
-            
-            <img src="https://www.dropbox.com/scl/fi/zej6t6dudx8tvgqjoi56v/IMG_2535.jpeg?rlkey=ztctohn8wrekeupjjc32x1uhb&st=y6vd51a1&raw=1" onclick="openLightbox(this.src)" alt="Gallery Image">
-            
-            <img src="https://www.dropbox.com/scl/fi/mhn7wvbgcphxsq9nkrv8m/IMG_2440.jpeg?rlkey=aealwoxkaezvrnfc483p5gm1e&st=3j88io37&raw=1" onclick="openLightbox(this.src)" alt="Gallery Image">
-            
-            <img src="https://www.dropbox.com/scl/fi/9igs9gv6bfpfp1najswz3/IMG_2405.jpeg?rlkey=8l5kfts3aw84tm4cpv7o00cs2&st=zli7fbje&raw=1" onclick="openLightbox(this.src)" alt="Gallery Image">
-            
-            <img src="https://www.dropbox.com/scl/fi/u6h0729j2ssrml4avqkzd/IMG_2363.jpeg?rlkey=l7vea5v1x3q6icsw72tn9ng6t&st=dxfz399u&raw=1" onclick="openLightbox(this.src)" alt="Gallery Image">
-            
-            <img src="https://www.dropbox.com/scl/fi/w1w9f3fhjqghm4n4qdeyl/IMG_1745.jpeg?rlkey=hy29n8a8erxwso884yct3xfc5&st=ydjlcs16&raw=1" onclick="openLightbox(this.src)" alt="Gallery Image">
-            
-            <img src="https://www.dropbox.com/scl/fi/8o2bsbwnkmrq8i3qpe8ld/IMG_1703.jpeg?rlkey=pir3z6uw6zpxdq69440out4e9&st=k1hrdrg9&raw=1" onclick="openLightbox(this.src)" alt="Gallery Image">
-            
-            <img src="https://www.dropbox.com/scl/fi/a34i25uwhm6jrml25ecyi/IMG_1671.JPG?rlkey=ts2s6jdz0bvh9g3gtxf08xvis&st=7gzxgn49&raw=1" onclick="openLightbox(this.src)" alt="Gallery Image">
-            
-            <img src="https://www.dropbox.com/scl/fi/fp51wqef7iul0kkihredy/IMG_1491.jpeg?rlkey=aj6ol464el4emgw6pglbal1nf&st=5rslnfs1&raw=1" onclick="openLightbox(this.src)" alt="Gallery Image">
-            
-            <img src="https://www.dropbox.com/scl/fi/yygk4gqe73fzrnilpd94b/IMG_0893.jpeg?rlkey=2sevxohk4kgitkfpi1ff4sois&st=ktaike7n&raw=1" onclick="openLightbox(this.src)" alt="Gallery Image">
-            
-            <img src="https://www.dropbox.com/scl/fi/ekp05gnfgpgbrcuy6ovtz/IMG_0824.jpeg?rlkey=zhe5dzersvoazienl4zr265tk&st=6813vbqg&raw=1" onclick="openLightbox(this.src)" alt="Gallery Image">
-            
-            <img src="https://www.dropbox.com/scl/fi/1trzni7rujswn1vyjmft1/IMG_0802.jpeg?rlkey=15wn57flnuyt2t6c10am6ci7y&st=8nrb9sqg&raw=1" onclick="openLightbox(this.src)" alt="Gallery Image">
-            
-            <img src="https://www.dropbox.com/scl/fi/ux8qkt7gsocbp422hjy5x/IMG_0437.jpg?rlkey=2lhmvxfic2sgd2a8qj9qka8gc&st=3sdesng8&raw=1" onclick="openLightbox(this.src)" alt="Gallery Image">
-            
-            <img src="https://www.dropbox.com/scl/fi/uxc6h04f2qe3pba2l9svf/IMG_0297.JPG?rlkey=m4eggg32j9jp4kuzfhn8hvfok&st=vcci8v6j&raw=1" onclick="openLightbox(this.src)" alt="Gallery Image">
-            
-            <img src="https://www.dropbox.com/scl/fi/e33rv7t1e9376c5aor2oq/DSC08678.JPEG?rlkey=9k2bffemrqywvafkvdyv67vd1&st=9miiug1w&raw=1" onclick="openLightbox(this.src)" alt="Gallery Image">
-            
-            
-            <img src="https://www.dropbox.com/scl/fi/lv72yzoalcogtd4yzu6pt/DSC08423.JPG?rlkey=hi9czzptqbr5ys1pnwk7dip61&st=hu3wp7o3&raw=1" onclick="openLightbox(this.src)" alt="Gallery Image">
-            
-            
-            <img src="https://www.dropbox.com/scl/fi/oodgknl3vumfvyd5jkzlc/DSC08056.JPG?rlkey=zyv38utgkeyh7iq06s5pvo82h&st=j4iidbl9&raw=1" onclick="openLightbox(this.src)" alt="Gallery Image">
-            <img src="https://www.dropbox.com/scl/fi/30xybyv2dn4m6jne59cut/_MG_3809.JPG?rlkey=qjq414em9cbcwdmfkc6t5rvy9&st=6gwmpm3e&raw=1" onclick="openLightbox(this.src)" alt="Gallery Image">
-            <img src="https://www.dropbox.com/scl/fi/vq1nk0t92544ca8lqotje/IMG_2258.jpg?rlkey=kkd3fih1wsrhus6vmhdid93f0&st=qumrori6&raw=1" onclick="openLightbox(this.src)" alt="Gallery Image">
-            <img src="https://www.dropbox.com/scl/fi/45dvxzo3u9bj3c64y3xu6/IMG_9275.JPG?rlkey=w4o34mb0lj9le1tdus931y3m4&st=rv4jgp7n&raw=1" onclick="openLightbox(this.src)" alt="Gallery Image">
-            
         </div>
     </main>
-
-    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-        <button class="close-btn" onclick="closeLightbox()">&times;</button>
-        <img id="lightbox-img" src="#" alt="Lightbox Image">
-    </div>
 
     <footer>
         <p>&copy; 2025 IMKH. All rights reserved.</p>
     </footer>
+
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <button class="close-btn" onclick="closeLightbox()">×</button>
+        <img id="lightbox-img" src="" alt="Enlarged Image">
+    </div>
 </body>
 </html>

@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - IMKH</title>
-    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         .Courgette {
             font-family: 'Courgette', sans-serif;
             font-weight: 600;
-            color: #d9d9d9; /* 원하는 색상으로 변경 가능 */
+            color: #d9d9d9;
         }
         body {
             font-family: Arial, sans-serif;
@@ -73,10 +73,13 @@
             text-decoration: none;
             padding: 10px 15px;
             display: inline-block;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            transition: transform 0.2s ease, font-size 0.2s ease;
         }
         .menu a:hover {
-            background-color: #555;
-            border-radius: 5px;
+            transform: scale(1.2);
+            font-size: 1.1em;
         }
         .show-menu {
             display: flex;
@@ -161,11 +164,7 @@
     <script>
         function toggleMenu() {
             let menu = document.getElementById('menu');
-            if (menu.style.display === 'flex') {
-                menu.style.display = 'none';
-            } else {
-                menu.style.display = 'flex';
-            }
+            menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
         }
     </script>
 </head>

@@ -63,8 +63,9 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background: transparent;
+            background: black;
             padding: 10px 20px;
+            width: auto;
             border-radius: 5px;
         }
         .menu a {
@@ -72,16 +73,14 @@
             text-decoration: none;
             padding: 10px 15px;
             display: inline-block;
-            font-family: 'Poppins', sans-serif;
-            font-weight: 500;
-            transition: transform 0.2s ease, font-size 0.2s ease;
         }
         .menu a:hover {
-            transform: scale(1.2);
-            font-size: 1.1em;
+            background-color: #555;
+            border-radius: 5px;
         }
         .show-menu {
             display: flex;
+        }
         .main-content {
             display: flex;
             justify-content: space-between;

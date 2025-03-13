@@ -86,8 +86,8 @@
         }
         .main-content {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            flex-direction: column; /* 수직 정렬 */
+            align-items: center; /* 가운데 정렬 */
             padding: 100px 20px 20px;
         }
         .video-container {
@@ -103,10 +103,10 @@
             border-radius: 10px;
         }
         .container {
-            text-align: left;
-            color: white;
             width: 75%;
+            text-align: left;
         }
+
         .links {
             width: 30%;
             display: flex;

@@ -175,11 +175,27 @@
             max-width: 800px; /* 적절한 너비 설정 */
             margin: 0 auto; /* 가운데 정렬 */
         }
+
+        .link-container a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #222;
+            border-radius: 5px;
+            width: 50px;  /* 버튼 크기 통일 */
+            height: 50px; /* 버튼 높이 통일 */
+            transition: transform 0.2s ease-in-out;
+        }
+        
+        .link-container a:hover {
+            transform: scale(1.1);
+            background: #444;
+        }
+
         .link-container img {
-            width: 24px;  /* 로고 크기 조정 */
-            height: 24px; /* 높이도 고정 */
+            width: 30px;  /* 로고 크기 조정 */
+            height: 30px; /* 로고 크기 조정 */
             object-fit: contain; /* 로고가 넘치지 않도록 */
-            margin-right: 8px;
         }
 
         .links a {
@@ -310,43 +326,43 @@
             <p class="links-title"><span class="Courgette">Links to listen kharl</span></p>
             <div class="links-container">
                 <a href="https://www.youtube.com/@hkmimkh" target="_blank">
-                    <link-container img src="https://i.namu.wiki/i/NAMDXGONy5Ur5PEpr97ZIdfK8Yp4TzxyZIpZHq7UBXQ8w8GMQDvzOqhEeZtpWRYIax_o6rENlGktF9IeQO2ZjA.svg" alt="YouTube Logo">
-              
+                    <img src="https://i.namu.wiki/i/NAMDXGONy5Ur5PEpr97ZIdfK8Yp4TzxyZIpZHq7UBXQ8w8GMQDvzOqhEeZtpWRYIax_o6rENlGktF9IeQO2ZjA.svg" alt="YouTube Logo">
                 </a>
+                
                 <a href="https://open.spotify.com/artist/6FpOHILF33XOAbFonZoisE?si=z9MosDXTT3Wgv4c2adK2Cg" target="_blank">
-                    <link-container img src="https://i.namu.wiki/i/fgqBdOlqzq0ZmXikQ4wkalJh0DT4-hLQrDDI5IDdE4AFZ9IydDcd3qUZ0Sn6qfY1ErfHu6dvfLWC9hlJmv4N76r4Rww7SH6tbJGTtDNnesREbEaLfg-RJhu9OrUzoqJhqcpNrahWTlBZ4-qdNmmivQ.svg" alt="Spotify Logo">
-               
+                    <img src="https://i.namu.wiki/i/fgqBdOlqzq0ZmXikQ4wkalJh0DT4-hLQrDDI5IDdE4AFZ9IydDcd3qUZ0Sn6qfY1ErfHu6dvfLWC9hlJmv4N76r4Rww7SH6tbJGTtDNnesREbEaLfg-RJhu9OrUzoqJhqcpNrahWTlBZ4-qdNmmivQ.svg" alt="Spotify Logo">
                 </a>
+                
                 <a href="https://music.apple.com/kr/artist/kharl/1617957275" target="_blank">
-                    <link-container img src="https://i.namu.wiki/i/hjoXw1cPqEvp2mWjYdTq9JJk0EfXg-WYprv0noGhs002rd_augMSn6d0xdliJPJnKeohs1T_TkDNZedArtZo8T--2-Zt5jHL281sZa8J7aGaBqf1pFQbTAkqWydi4txrdvyZCtQ4GCZsZfYKuBKxvA.svg" alt="Apple Music Logo">
-               
+                    <img src="https://i.namu.wiki/i/hjoXw1cPqEvp2mWjYdTq9JJk0EfXg-WYprv0noGhs002rd_augMSn6d0xdliJPJnKeohs1T_TkDNZedArtZo8T--2-Zt5jHL281sZa8J7aGaBqf1pFQbTAkqWydi4txrdvyZCtQ4GCZsZfYKuBKxvA.svg" alt="Apple Music Logo">
                 </a>
+                
                 <a href="https://music.youtube.com/channel/UCN3HuMuSfe-r-HxHiMFD5JQ" target="_blank">
-                    <link-container img src="https://i.namu.wiki/i/LpOEUGoM8TGt8Km6M8PzRniJoEzofDHqMeX8YV0u1u_Xu71O4P0rySUyICpmzWtxMJPIFXz3IVTJynpZUTHOfaAxvKN9KAYPGcwzwnro2qKGmi1-X9UMklKYNFSJqedtGs6An_H6qWKJ8qj1fJRf_g.svg" alt="YouTube Music Logo">
-                 
+                    <img src="https://i.namu.wiki/i/LpOEUGoM8TGt8Km6M8PzRniJoEzofDHqMeX8YV0u1u_Xu71O4P0rySUyICpmzWtxMJPIFXz3IVTJynpZUTHOfaAxvKN9KAYPGcwzwnro2qKGmi1-X9UMklKYNFSJqedtGs6An_H6qWKJ8qj1fJRf_g.svg" alt="YouTube Music Logo">
                 </a>
+                
                 <a href="https://www.melon.com/artist/timeline.htm?artistId=3087962" target="_blank">
-                    <link-container img src="https://i.namu.wiki/i/2QOFW_OwO_g1800xhLccizOh6pLn6aSo57jPDat8GYhAG-TIYcPgcbNl-HtPymkp0MlD1MyLI7G1a85M7KscoC1_0XEdQyTrF8FiLESSVj3uszEfkwHvZPHPbX1MmoJ5nZH3JWY_e6QQHXUC2qDoGg.svg" alt="Melon Logo">
-                   
+                    <img src="https://i.namu.wiki/i/2QOFW_OwO_g1800xhLccizOh6pLn6aSo57jPDat8GYhAG-TIYcPgcbNl-HtPymkp0MlD1MyLI7G1a85M7KscoC1_0XEdQyTrF8FiLESSVj3uszEfkwHvZPHPbX1MmoJ5nZH3JWY_e6QQHXUC2qDoGg.svg" alt="Melon Logo">
                 </a>
+                
                 <a href="https://www.genie.co.kr/detail/artistInfo?xxnm=81381815" target="_blank">
-                    <link-container img src="https://i.namu.wiki/i/J5-9W5W_0Cew_QbmNDc8ozfmNfgoIBXoGTeMywHyeO1NkFlsCav4lyyvkwd46VUPOHDuNPFYkW47HyGESOhs3Q.svg" alt="Genie Logo">
-                   
+                    <img src="https://i.namu.wiki/i/J5-9W5W_0Cew_QbmNDc8ozfmNfgoIBXoGTeMywHyeO1NkFlsCav4lyyvkwd46VUPOHDuNPFYkW47HyGESOhs3Q.svg" alt="Genie Logo">
                 </a>
+                
                 <a href="https://music.bugs.co.kr/artist/20157543?wl_ref=list_ab_04" target="_blank">
-                    <link-container img src="https://i.namu.wiki/i/de5QqpCwCKx8tUI0BgFBZOBo-IYSRcEUULJJAXAITdMwhJDBpZmOC0luySsZ9Lg6nN0PQZpmNaSMBSA8oTzcGZRSyDI79FY-w4mW7_3KVc3Lmk6OYTjIlLmqXw8lcRuUjPhJe65tT64cK7u5SYjM1Q.svg" alt="Bugs Logo">
-                   
+                    <img src="https://i.namu.wiki/i/de5QqpCwCKx8tUI0BgFBZOBo-IYSRcEUULJJAXAITdMwhJDBpZmOC0luySsZ9Lg6nN0PQZpmNaSMBSA8oTzcGZRSyDI79FY-w4mW7_3KVc3Lmk6OYTjIlLmqXw8lcRuUjPhJe65tT64cK7u5SYjM1Q.svg" alt="Bugs Logo">
                 </a>
+                
                 <a href="https://www.music-flo.com/detail/artist/405382061/track?sortType=POPULARITY&roleType=ALL" target="_blank">
-                    <link-container img src="https://i.namu.wiki/i/7oIQOZOqKN09WyHOxKt4qNwR7uk90wFc2L2Vh3ShTO5b0QRemIQwxH-Fe1GKT55f7mSipJxvXYGn5yE6ptPKBQ.svg" alt="Flo Logo">
-                    
+                    <img src="https://i.namu.wiki/i/7oIQOZOqKN09WyHOxKt4qNwR7uk90wFc2L2Vh3ShTO5b0QRemIQwxH-Fe1GKT55f7mSipJxvXYGn5yE6ptPKBQ.svg" alt="Flo Logo">
                 </a>
+                
                 <a href="https://vibe.naver.com/artist/5399656" target="_blank">
-                    <link-container img src="https://i.namu.wiki/i/LHwgaBiOeTabPQtX1UHOfF-OxXmPnBAZqA3lh6SyLh-KlGKcNdBaDtXoPlIJY0zOnJZGYOe4uK9TBnkTAMiibYr1U504mHRgeUfRlFcM7T1A_ys8aNstCEexaRbn144-S9kq7zbaQ9Y964xA-sPlLg.svg" alt="VIBE Logo">
+                    <img src="https://i.namu.wiki/i/LHwgaBiOeTabPQtX1UHOfF-OxXmPnBAZqA3lh6SyLh-KlGKcNdBaDtXoPlIJY0zOnJZGYOe4uK9TBnkTAMiibYr1U504mHRgeUfRlFcM7T1A_ys8aNstCEexaRbn144-S9kq7zbaQ9Y964xA-sPlLg.svg" alt="VIBE Logo">
                 </a>
+                
                 <a href="https://www.amazon.com/music/player/artists/B0DY13115J/%EC%B9%BC-kharl" target="_blank">
-                    <link-container img src="https://i.namu.wiki/i/xXClj5yTqEH9-olXaeNgeyu3LV3YZV1ZQv_kLnziRHKjGtwYU8J2Qv0h5GKyVXbhx239IE87GG8z1WcMiSBUMQ.svg" alt="Amazon Music Logo">
-                    
+                    <img src="https://i.namu.wiki/i/xXClj5yTqEH9-olXaeNgeyu3LV3YZV1ZQv_kLnziRHKjGtwYU8J2Qv0h5GKyVXbhx239IE87GG8z1WcMiSBUMQ.svg" alt="Amazon Music Logo"> 
                 </a>
                     </div>
         </div>

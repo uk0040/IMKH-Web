@@ -104,11 +104,11 @@
         .member {
             display: flex;
             align-items: center;
-            justify-content: center;
-            margin-bottom: 20px;
+            justify-content: space-between; /* 왼쪽: 이미지 + 텍스트, 오른쪽: 링크드인 버튼 */
+            width: 100%;
             border-bottom: 1px solid #ddd;
             padding-bottom: 10px;
-            cursor: pointer;
+            margin-bottom: 20px;
         }
         .member img {
             width: 100px;
@@ -116,18 +116,23 @@
             border-radius: 50%;
             margin-right: 20px;
         }
+        .member-content {
+            display: flex;
+            justify-content: space-between; /* 왼쪽: 텍스트, 오른쪽: 버튼 */
+            align-items: center;
+            width: 100%;
+        }
         .member-info {
             display: flex;
-            align-items: center;
-            justify-content: space-between; /* 양쪽 끝 정렬 */
-            width: 100%; /* 전체 영역 사용 */
+            flex-direction: column; /* 텍스트를 세로 정렬 */
         }
+
         .linkedin-button {
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 30px; /* 버튼 크기 */
-            height: 30px;
+            width: 40px; /* 버튼 크기 */
+            height: 40px;
             transition: transform 0.2s ease-in-out;
         }
 
@@ -208,13 +213,16 @@
             <h2><span class="Poppins">Team IMKH</span></h2>
             <div class="member">
             <img src="https://www.dropbox.com/scl/fi/3u7130ii02so0pebebj7m/SK_1.JPG?rlkey=1kulk4dxwxs2u7g5z6m1mmtp0&st=llbl4y7p&raw=1" alt="Member 1">
-            <div class="member-info">
-                <h3>Sanguk Kang</h3>
+    
+            <div class="member-content">
+                <div class="member-info">
+                    <h3>Sanguk Kang</h3>
+                    <p>Hey, Nice to meet you.</p>
+                </div>
+
                 <a href="https://www.linkedin.com/in/sanguk-kang-5a1145313/" target="_blank" rel="noopener noreferrer" class="linkedin-button">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn">
                 </a>
-            </div>
-            <p>Hey, Nice to meet you.</p>
             </div>
             </div>
             

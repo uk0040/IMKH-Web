@@ -117,9 +117,29 @@
             margin-right: 20px;
         }
         .member-info {
-            flex-grow: 1;
-            text-align: left;
+            display: flex;
+            align-items: center;
+            justify-content: space-between; /* 양쪽 끝 정렬 */
+            width: 100%; /* 전체 영역 사용 */
         }
+        .linkedin-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px; /* 버튼 크기 */
+            height: 30px;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .linkedin-button img {
+            width: 100%;
+            height: auto;
+        }
+
+        .linkedin-button:hover {
+            transform: scale(1.1); /* 마우스 호버 시 확대 효과 */
+        }
+        
         footer {
             background: rgba(0, 0, 0, 0.7);
             color: white;
@@ -186,13 +206,18 @@
     <main>
         <section class="container">
             <h2><span class="Poppins">Team IMKH</span></h2>
-            <div class="member" onclick="location.href='https://www.linkedin.com/in/sanguk-kang-5a1145313/'">
-                <img src="https://www.dropbox.com/scl/fi/3u7130ii02so0pebebj7m/SK_1.JPG?rlkey=1kulk4dxwxs2u7g5z6m1mmtp0&st=llbl4y7p&raw=1" alt="Member 1">
-                <div class="member-info">
-                    <h3>Sanguk Kang</h3>
-                    <p>Hey, Nice to meet you.</p>
-                </div>
+            <div class="member">
+            <img src="https://www.dropbox.com/scl/fi/3u7130ii02so0pebebj7m/SK_1.JPG?rlkey=1kulk4dxwxs2u7g5z6m1mmtp0&st=llbl4y7p&raw=1" alt="Member 1">
+            <div class="member-info">
+                <h3>Sanguk Kang</h3>
+                <a href="https://www.linkedin.com/in/sanguk-kang-5a1145313/" target="_blank" rel="noopener noreferrer" class="linkedin-button">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn">
+                </a>
             </div>
+            <p>Hey, Nice to meet you.</p>
+            </div>
+            </div>
+            
             <div class="member" onclick="location.href='member2.html'">
                 <img src="https://www.dropbox.com/scl/fi/09ellty2928mczii35eib/IM_1.jpeg?rlkey=7wc8cfabhxfpesirdtjbf6ghp&st=47rsqlns&raw=1" alt="Member 2">
                 <div class="member-info">

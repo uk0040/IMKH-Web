@@ -102,48 +102,54 @@
             z-index: 10;
         }
         .member {
-            display: flex;
-            align-items: center;
-            justify-content: space-between; /* 왼쪽: 이미지 + 텍스트, 오른쪽: 링크드인 버튼 */
-            width: 100%;
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
-        .member img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            margin-right: 20px;
-        }
-        .member-content {
-            display: flex;
-            justify-content: space-between; /* 왼쪽: 텍스트, 오른쪽: 버튼 */
-            align-items: center;
-            width: 100%;
-        }
-        .member-info {
-            display: flex;
-            flex-direction: column; /* 텍스트를 세로 정렬 */
-        }
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* 왼쪽: 이미지 + 텍스트, 오른쪽: 링크드인 버튼 */
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
 
-        .linkedin-button {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px; /* 버튼 크기 */
-            height: 40px;
-            transition: transform 0.2s ease-in-out;
-        }
+.member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
 
-        .linkedin-button img {
-            width: 100%;
-            height: auto;
-        }
+.member-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* 왼쪽: 텍스트, 오른쪽: 버튼 */
+    width: 100%;
+}
 
-        .linkedin-button:hover {
-            transform: scale(1.1); /* 마우스 호버 시 확대 효과 */
-        }
+.member-info {
+    display: flex;
+    flex-direction: column; /* 텍스트를 세로 정렬 */
+    text-align: left; /* 왼쪽 정렬 */
+    flex-grow: 1; /* 텍스트가 가득 차도록 */
+}
+
+.linkedin-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin-left: auto; /* 자동으로 오른쪽 정렬 */
+    transition: transform 0.2s ease-in-out;
+}
+
+.linkedin-button img {
+    width: 100%;
+    height: auto;
+}
+
+.linkedin-button:hover {
+    transform: scale(1.1);
+}
         
         footer {
             background: rgba(0, 0, 0, 0.7);
@@ -212,18 +218,18 @@
         <section class="container">
             <h2><span class="Poppins">Team IMKH</span></h2>
             <div class="member">
-            <img src="https://www.dropbox.com/scl/fi/3u7130ii02so0pebebj7m/SK_1.JPG?rlkey=1kulk4dxwxs2u7g5z6m1mmtp0&st=llbl4y7p&raw=1" alt="Member 1">
+                <img src="https://www.dropbox.com/scl/fi/3u7130ii02so0pebebj7m/SK_1.JPG?rlkey=1kulk4dxwxs2u7g5z6m1mmtp0&st=llbl4y7p&raw=1" alt="Member 1">
     
-            <div class="member-content">
-                <div class="member-info">
-                    <h3>Sanguk Kang</h3>
-                    <p>Hey, Nice to meet you.</p>
-                </div>
+                <div class="member-content">
+                    <div class="member-info">
+                        <h3>Sanguk Kang</h3>
+                        <p>Hey, Nice to meet you.</p>
+                    </div>
 
-                <a href="https://www.linkedin.com/in/sanguk-kang-5a1145313/" target="_blank" rel="noopener noreferrer" class="linkedin-button">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn">
-                </a>
-            </div>
+                    <a href="https://www.linkedin.com/in/sanguk-kang-5a1145313/" target="_blank" rel="noopener noreferrer" class="linkedin-button">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn">
+                    </a>
+                </div>
             </div>
             
             <div class="member" onclick="location.href='member2.html'">

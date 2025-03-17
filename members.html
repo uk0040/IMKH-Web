@@ -131,7 +131,14 @@
     text-align: left; /* 왼쪽 정렬 */
     flex-grow: 1; /* 텍스트가 가득 차도록 */
 }
+    .member-info h3 {
+    margin-bottom: 2px; /* 이름 아래 간격 줄이기 (기본값보다 작게) */
+}
 
+.member-info p {
+    margin-top: 2px; /* 텍스트 위 간격 줄이기 */
+}
+        
 .linkedin-button {
     display: flex;
     align-items: center;
@@ -232,13 +239,21 @@
                 </div>
             </div>
             
-            <div class="member" onclick="location.href='member2.html'">
+            <div class="member">
                 <img src="https://www.dropbox.com/scl/fi/09ellty2928mczii35eib/IM_1.jpeg?rlkey=7wc8cfabhxfpesirdtjbf6ghp&st=47rsqlns&raw=1" alt="Member 2">
-                <div class="member-info">
-                    <h3>IM</h3>
-                    <p>Pretty and sexy.</p>
+                
+                <div class="member-content">
+                    <div class="member-info">
+                        <h3>IM</h3>
+                        <p>Pretty and sexy.</p>
+                    </div>
+
+                    <a href="https://www.instagram.com/hyundangi/" target="_blank" rel="noopener noreferrer" class="linkedin-button">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn">
+                    </a>
                 </div>
             </div>
+            
         </section>
     </main>
 
